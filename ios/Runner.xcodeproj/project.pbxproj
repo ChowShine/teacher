@@ -1,0 +1,996 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
+		3B80C3941E831B6300D905FE /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; };
+		3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74970F681EDC0F26000507F3 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 74970F671EDC0F26000507F3 /* GeneratedPluginRegistrant.m */; };
+		90D424907457BBC95A409FB2 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3D2095A29976D2D926E7DC /* Pods_Runner.framework */; };
+		9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9740EEBA1CF902C7004384FC /* Flutter.framework */; };
+		9705A1C71CF904A300538489 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9740EEBA1CF902C7004384FC /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9740EEB41CF90195004384FC /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9740EEB21CF90195004384FC /* Debug.xcconfig */; };
+		9740EEB51CF90195004384FC /* Generated.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9740EEB31CF90195004384FC /* Generated.xcconfig */; };
+		978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */; };
+		97C146F31CF9000F007C117D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C146F21CF9000F007C117D /* main.m */; };
+		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
+		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
+		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		BE0D9D09232F750600945AFB /* liblibvideochat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0D9D08232F750600945AFB /* liblibvideochat.a */; };
+		BE0D9D0B232F756700945AFB /* liblibnetcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0D9D0A232F756700945AFB /* liblibnetcore.a */; };
+		BE0D9D0D232F7A3700945AFB /* liblibsqlite_code.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0D9D0C232F7A3700945AFB /* liblibsqlite_code.a */; };
+		BE4D07C1232CB26900D19557 /* swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07C0232CB26900D19557 /* swift.swift */; };
+		BE4D0803232CB78400D19557 /* json_plugin.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07D7232CB78400D19557 /* json_plugin.cc */; };
+		BE4D0804232CB78400D19557 /* method_codec.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07D8232CB78400D19557 /* method_codec.cc */; };
+		BE4D0805232CB78400D19557 /* plugin_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07D9232CB78400D19557 /* plugin_manager.cc */; };
+		BE4D0806232CB78400D19557 /* method_call.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07DA232CB78400D19557 /* method_call.cc */; };
+		BE4D0807232CB78400D19557 /* standard_plugin.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07DB232CB78400D19557 /* standard_plugin.cc */; };
+		BE4D0808232CB78400D19557 /* json_method_codec.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07DC232CB78400D19557 /* json_method_codec.cc */; };
+		BE4D0809232CB78400D19557 /* standard_method_call.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07DD232CB78400D19557 /* standard_method_call.cc */; };
+		BE4D080A232CB78400D19557 /* plugin.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07DE232CB78400D19557 /* plugin.cc */; };
+		BE4D080F232CB78400D19557 /* json_method_call.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07E5232CB78400D19557 /* json_method_call.cc */; };
+		BE4D0810232CB78400D19557 /* standard_value.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07E6232CB78400D19557 /* standard_value.cc */; };
+		BE4D0811232CB78400D19557 /* method_result.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07E7232CB78400D19557 /* method_result.cc */; };
+		BE4D0812232CB78400D19557 /* standard_method_codec.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE4D07E8232CB78400D19557 /* standard_method_codec.cc */; };
+		BE4D08C1232CCF6300D19557 /* liblibprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08C0232CCF6300D19557 /* liblibprotobuf.a */; };
+		BE4D08C3232CCF7F00D19557 /* liblibpub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08C2232CCF7F00D19557 /* liblibpub.a */; };
+		BE4D08C5232CCF9400D19557 /* libcurl-networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08C4232CCF9400D19557 /* libcurl-networking.a */; };
+		BE4D08D8232CCFE000D19557 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08CA232CCFDF00D19557 /* libavutil.a */; };
+		BE4D08D9232CCFE000D19557 /* liblibyuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08CB232CCFDF00D19557 /* liblibyuv.a */; };
+		BE4D08DA232CCFE000D19557 /* libopenh264-1.6.0-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08CC232CCFDF00D19557 /* libopenh264-1.6.0-ios.a */; };
+		BE4D08DB232CCFE000D19557 /* liblibrtpsvr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08CD232CCFE000D19557 /* liblibrtpsvr.a */; };
+		BE4D08DC232CCFE000D19557 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08CE232CCFE000D19557 /* libswresample.a */; };
+		BE4D08DD232CCFE000D19557 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08CF232CCFE000D19557 /* libx264.a */; };
+		BE4D08DE232CCFE000D19557 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D0232CCFE000D19557 /* libavformat.a */; };
+		BE4D08DF232CCFE000D19557 /* liblibavmoudle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D1232CCFE000D19557 /* liblibavmoudle.a */; };
+		BE4D08E0232CCFE000D19557 /* libyt_rtc_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D2232CCFE000D19557 /* libyt_rtc_wrapper.a */; };
+		BE4D08E1232CCFE000D19557 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D3232CCFE000D19557 /* libavresample.a */; };
+		BE4D08E2232CCFE000D19557 /* libfdk-aac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D4232CCFE000D19557 /* libfdk-aac.a */; };
+		BE4D08E3232CCFE000D19557 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D5232CCFE000D19557 /* libavcodec.a */; };
+		BE4D08E4232CCFE000D19557 /* liblibyuv_wrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D6232CCFE000D19557 /* liblibyuv_wrapper.a */; };
+		BE4D08E5232CCFE000D19557 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08D7232CCFE000D19557 /* libswscale.a */; };
+		BE4D08E7232CD01000D19557 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08E6232CD01000D19557 /* libcurl.a */; };
+		BE4D08E9232CD02C00D19557 /* libevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08E8232CD02C00D19557 /* libevent.a */; };
+		BE4D08EC232CD05400D19557 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08EA232CD05400D19557 /* libssl.a */; };
+		BE4D08ED232CD05400D19557 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08EB232CD05400D19557 /* libcrypto.a */; };
+		BE4D08F1232CD2A000D19557 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08F0232CD2A000D19557 /* libiconv.tbd */; };
+		BE4D08F5232CD33A00D19557 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08F4232CD33A00D19557 /* VideoToolbox.framework */; };
+		BE4D08F7232CD35900D19557 /* liblibjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4D08F6232CD35900D19557 /* liblibjson.a */; };
+		BE4D0901232D4F0700D19557 /* flutterplug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0900232D4F0700D19557 /* flutterplug.cpp */; };
+		BE4D0B10232DF99400D19557 /* CppPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0B0E232DF99400D19557 /* CppPlugin.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */,
+				9705A1C71CF904A300538489 /* Flutter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		206794829B1D5BB74D4BDDD2 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		3B80C3931E831B6300D905FE /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = App.framework; path = Flutter/App.framework; sourceTree = "<group>"; };
+		74970F661EDC0F26000507F3 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
+		74970F671EDC0F26000507F3 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
+		7AFFD8ED1D35381100E5BB4D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
+		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
+		9740EEBA1CF902C7004384FC /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Flutter.framework; path = Flutter/Flutter.framework; sourceTree = "<group>"; };
+		97C146EE1CF9000F007C117D /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97C146F21CF9000F007C117D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97C146FB1CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0678E49741B2060E8584FF8 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		BE0D9D08232F750600945AFB /* liblibvideochat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibvideochat.a; path = ../plugins_libs/ios/liblibvideochat.a; sourceTree = "<group>"; };
+		BE0D9D0A232F756700945AFB /* liblibnetcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibnetcore.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsnetclient/prebuilt/ios/liblibnetcore.a; sourceTree = "<group>"; };
+		BE0D9D0C232F7A3700945AFB /* liblibsqlite_code.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibsqlite_code.a; path = ../../../../../cppinclude/001_lib_prebuilt/libsqlite_code/prebuilt/ios/liblibsqlite_code.a; sourceTree = "<group>"; };
+		BE4D07BF232CB26800D19557 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE4D07C0232CB26900D19557 /* swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift.swift; sourceTree = "<group>"; };
+		BE4D07C6232CB78400D19557 /* OpertionFunction_xstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpertionFunction_xstruct.h; sourceTree = "<group>"; };
+		BE4D07C7232CB78400D19557 /* def_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = def_base.h; sourceTree = "<group>"; };
+		BE4D07C8232CB78400D19557 /* def_base_xstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = def_base_xstruct.h; sourceTree = "<group>"; };
+		BE4D07C9232CB78400D19557 /* LogicModule_Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicModule_Interface.h; sourceTree = "<group>"; };
+		BE4D07CA232CB78400D19557 /* userbase_xstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userbase_xstruct.h; sourceTree = "<group>"; };
+		BE4D07CB232CB78400D19557 /* OpertionHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpertionHandle.h; sourceTree = "<group>"; };
+		BE4D07CC232CB78400D19557 /* UpdateUIHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUIHandle.h; sourceTree = "<group>"; };
+		BE4D07CD232CB78400D19557 /* UpdateUIFunction_xstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUIFunction_xstruct.h; sourceTree = "<group>"; };
+		BE4D07CE232CB78400D19557 /* OpertionFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpertionFunction.h; sourceTree = "<group>"; };
+		BE4D07CF232CB78400D19557 /* roombase_xstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roombase_xstruct.h; sourceTree = "<group>"; };
+		BE4D07D0232CB78400D19557 /* LogicModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicModule.h; sourceTree = "<group>"; };
+		BE4D07D1232CB78400D19557 /* UpdateUIFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUIFunction.h; sourceTree = "<group>"; };
+		BE4D07D2232CB78400D19557 /* roombase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = roombase.h; sourceTree = "<group>"; };
+		BE4D07D3232CB78400D19557 /* userbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userbase.h; sourceTree = "<group>"; };
+		BE4D07D5232CB78400D19557 /* flutterplug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flutterplug.h; sourceTree = "<group>"; };
+		BE4D07D7232CB78400D19557 /* json_plugin.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_plugin.cc; sourceTree = "<group>"; };
+		BE4D07D8232CB78400D19557 /* method_codec.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = method_codec.cc; sourceTree = "<group>"; };
+		BE4D07D9232CB78400D19557 /* plugin_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plugin_manager.cc; sourceTree = "<group>"; };
+		BE4D07DA232CB78400D19557 /* method_call.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = method_call.cc; sourceTree = "<group>"; };
+		BE4D07DB232CB78400D19557 /* standard_plugin.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = standard_plugin.cc; sourceTree = "<group>"; };
+		BE4D07DC232CB78400D19557 /* json_method_codec.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_method_codec.cc; sourceTree = "<group>"; };
+		BE4D07DD232CB78400D19557 /* standard_method_call.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = standard_method_call.cc; sourceTree = "<group>"; };
+		BE4D07DE232CB78400D19557 /* plugin.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plugin.cc; sourceTree = "<group>"; };
+		BE4D07E5232CB78400D19557 /* json_method_call.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_method_call.cc; sourceTree = "<group>"; };
+		BE4D07E6232CB78400D19557 /* standard_value.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = standard_value.cc; sourceTree = "<group>"; };
+		BE4D07E7232CB78400D19557 /* method_result.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = method_result.cc; sourceTree = "<group>"; };
+		BE4D07E8232CB78400D19557 /* standard_method_codec.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = standard_method_codec.cc; sourceTree = "<group>"; };
+		BE4D07EA232CB78400D19557 /* standard_method_call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = standard_method_call.h; sourceTree = "<group>"; };
+		BE4D07EB232CB78400D19557 /* plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin.h; sourceTree = "<group>"; };
+		BE4D07EC232CB78400D19557 /* method_result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = method_result.h; sourceTree = "<group>"; };
+		BE4D07ED232CB78400D19557 /* standard_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = standard_plugin.h; sourceTree = "<group>"; };
+		BE4D07EE232CB78400D19557 /* json_plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_plugin.h; sourceTree = "<group>"; };
+		BE4D07FB232CB78400D19557 /* method_call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = method_call.h; sourceTree = "<group>"; };
+		BE4D07FC232CB78400D19557 /* method_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = method_codec.h; sourceTree = "<group>"; };
+		BE4D07FD232CB78400D19557 /* standard_value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = standard_value.h; sourceTree = "<group>"; };
+		BE4D07FE232CB78400D19557 /* standard_method_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = standard_method_codec.h; sourceTree = "<group>"; };
+		BE4D07FF232CB78400D19557 /* json_method_call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_method_call.h; sourceTree = "<group>"; };
+		BE4D0800232CB78400D19557 /* json_method_codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_method_codec.h; sourceTree = "<group>"; };
+		BE4D0801232CB78400D19557 /* plugin_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plugin_manager.h; sourceTree = "<group>"; };
+		BE4D08C0232CCF6300D19557 /* liblibprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibprotobuf.a; path = "../../../../../cppinclude/001_lib_prebuilt/libprotobuf-2.6.1/prebuilt/ios/liblibprotobuf.a"; sourceTree = "<group>"; };
+		BE4D08C2232CCF7F00D19557 /* liblibpub.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibpub.a; path = ../../../../../cppinclude/001_lib_prebuilt/libpub/prebuilt/ios/liblibpub.a; sourceTree = "<group>"; };
+		BE4D08C4232CCF9400D19557 /* libcurl-networking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcurl-networking.a"; path = "../../../../../cppinclude/001_lib_prebuilt/lib_curl_networking/prebuilt/ios/libcurl-networking.a"; sourceTree = "<group>"; };
+		BE4D08CA232CCFDF00D19557 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libavutil.a; sourceTree = "<group>"; };
+		BE4D08CB232CCFDF00D19557 /* liblibyuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibyuv.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/liblibyuv.a; sourceTree = "<group>"; };
+		BE4D08CC232CCFDF00D19557 /* libopenh264-1.6.0-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libopenh264-1.6.0-ios.a"; path = "../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libopenh264-1.6.0-ios.a"; sourceTree = "<group>"; };
+		BE4D08CD232CCFE000D19557 /* liblibrtpsvr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibrtpsvr.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/liblibrtpsvr.a; sourceTree = "<group>"; };
+		BE4D08CE232CCFE000D19557 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libswresample.a; sourceTree = "<group>"; };
+		BE4D08CF232CCFE000D19557 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libx264.a; sourceTree = "<group>"; };
+		BE4D08D0232CCFE000D19557 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libavformat.a; sourceTree = "<group>"; };
+		BE4D08D1232CCFE000D19557 /* liblibavmoudle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibavmoudle.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/liblibavmoudle.a; sourceTree = "<group>"; };
+		BE4D08D2232CCFE000D19557 /* libyt_rtc_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyt_rtc_wrapper.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libyt_rtc_wrapper.a; sourceTree = "<group>"; };
+		BE4D08D3232CCFE000D19557 /* libavresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavresample.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libavresample.a; sourceTree = "<group>"; };
+		BE4D08D4232CCFE000D19557 /* libfdk-aac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libfdk-aac.a"; path = "../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libfdk-aac.a"; sourceTree = "<group>"; };
+		BE4D08D5232CCFE000D19557 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libavcodec.a; sourceTree = "<group>"; };
+		BE4D08D6232CCFE000D19557 /* liblibyuv_wrapper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibyuv_wrapper.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/liblibyuv_wrapper.a; sourceTree = "<group>"; };
+		BE4D08D7232CCFE000D19557 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ../../../../../cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios/libswscale.a; sourceTree = "<group>"; };
+		BE4D08E6232CD01000D19557 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../../cppinclude/001_lib_prebuilt/lib_curl/prebuilt/ios/libcurl.a; sourceTree = "<group>"; };
+		BE4D08E8232CD02C00D19557 /* libevent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libevent.a; path = ../../../../../cppinclude/001_lib_prebuilt/libevent/prebuilt/ios/libevent.a; sourceTree = "<group>"; };
+		BE4D08EA232CD05400D19557 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../../cppinclude/001_lib_prebuilt/libopenssl/prebuilt/ios/libssl.a; sourceTree = "<group>"; };
+		BE4D08EB232CD05400D19557 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../../cppinclude/001_lib_prebuilt/libopenssl/prebuilt/ios/libcrypto.a; sourceTree = "<group>"; };
+		BE4D08F0232CD2A000D19557 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		BE4D08F4232CD33A00D19557 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BE4D08F6232CD35900D19557 /* liblibjson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibjson.a; path = ../../../../../cppinclude/001_lib_prebuilt/libjson/prebuilt/ios/liblibjson.a; sourceTree = "<group>"; };
+		BE4D08FB232D340700D19557 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BE4D0900232D4F0700D19557 /* flutterplug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flutterplug.cpp; sourceTree = "<group>"; };
+		BE4D0902232D4FF300D19557 /* dalipush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = dalipush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0904232D4FF300D19557 /* file_picker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = file_picker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0906232D4FF300D19557 /* flutter_bugly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = flutter_bugly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0908232D4FF300D19557 /* flutter_local_notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = flutter_local_notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D090A232D4FF300D19557 /* image_picker_saver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = image_picker_saver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D090C232D4FF300D19557 /* image_picker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = image_picker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D090E232D4FF300D19557 /* keyboard_visibility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = keyboard_visibility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0910232D4FF300D19557 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0912232D4FF300D19557 /* open_file.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = open_file.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0914232D4FF300D19557 /* path_provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = path_provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0916232D4FF300D19557 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0918232D4FF300D19557 /* screen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = screen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D091A232D4FF300D19557 /* shared_preferences.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = shared_preferences.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D091C232D4FF300D19557 /* soundpool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = soundpool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D091E232D4FF300D19557 /* video_render_plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = video_render_plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4D0B0E232DF99400D19557 /* CppPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CppPlugin.mm; sourceTree = "<group>"; };
+		BE4D0B0F232DF99400D19557 /* CppPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppPlugin.h; sourceTree = "<group>"; };
+		FB3D2095A29976D2D926E7DC /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97C146EB1CF9000F007C117D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE0D9D0D232F7A3700945AFB /* liblibsqlite_code.a in Frameworks */,
+				BE0D9D0B232F756700945AFB /* liblibnetcore.a in Frameworks */,
+				BE0D9D09232F750600945AFB /* liblibvideochat.a in Frameworks */,
+				BE4D08F7232CD35900D19557 /* liblibjson.a in Frameworks */,
+				BE4D08F1232CD2A000D19557 /* libiconv.tbd in Frameworks */,
+				BE4D08EC232CD05400D19557 /* libssl.a in Frameworks */,
+				BE4D08ED232CD05400D19557 /* libcrypto.a in Frameworks */,
+				BE4D08E9232CD02C00D19557 /* libevent.a in Frameworks */,
+				BE4D08E7232CD01000D19557 /* libcurl.a in Frameworks */,
+				BE4D08D8232CCFE000D19557 /* libavutil.a in Frameworks */,
+				BE4D08D9232CCFE000D19557 /* liblibyuv.a in Frameworks */,
+				BE4D08DA232CCFE000D19557 /* libopenh264-1.6.0-ios.a in Frameworks */,
+				BE4D08DB232CCFE000D19557 /* liblibrtpsvr.a in Frameworks */,
+				BE4D08DC232CCFE000D19557 /* libswresample.a in Frameworks */,
+				BE4D08DD232CCFE000D19557 /* libx264.a in Frameworks */,
+				BE4D08DE232CCFE000D19557 /* libavformat.a in Frameworks */,
+				BE4D08DF232CCFE000D19557 /* liblibavmoudle.a in Frameworks */,
+				BE4D08E0232CCFE000D19557 /* libyt_rtc_wrapper.a in Frameworks */,
+				BE4D08E1232CCFE000D19557 /* libavresample.a in Frameworks */,
+				BE4D08E2232CCFE000D19557 /* libfdk-aac.a in Frameworks */,
+				BE4D08E3232CCFE000D19557 /* libavcodec.a in Frameworks */,
+				BE4D08E4232CCFE000D19557 /* liblibyuv_wrapper.a in Frameworks */,
+				BE4D08E5232CCFE000D19557 /* libswscale.a in Frameworks */,
+				BE4D08C5232CCF9400D19557 /* libcurl-networking.a in Frameworks */,
+				BE4D08C3232CCF7F00D19557 /* liblibpub.a in Frameworks */,
+				BE4D08C1232CCF6300D19557 /* liblibprotobuf.a in Frameworks */,
+				BE4D08F5232CD33A00D19557 /* VideoToolbox.framework in Frameworks */,
+				9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */,
+				3B80C3941E831B6300D905FE /* App.framework in Frameworks */,
+				90D424907457BBC95A409FB2 /* Pods_Runner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65A9F38B97F90C6F12E49EF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				206794829B1D5BB74D4BDDD2 /* Pods-Runner.debug.xcconfig */,
+				B0678E49741B2060E8584FF8 /* Pods-Runner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9740EEB11CF90186004384FC /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				3B80C3931E831B6300D905FE /* App.framework */,
+				3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */,
+				9740EEBA1CF902C7004384FC /* Flutter.framework */,
+				9740EEB21CF90195004384FC /* Debug.xcconfig */,
+				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
+				9740EEB31CF90195004384FC /* Generated.xcconfig */,
+			);
+			name = Flutter;
+			sourceTree = "<group>";
+		};
+		97C146E51CF9000F007C117D = {
+			isa = PBXGroup;
+			children = (
+				BE4D07E9232CB78400D19557 /* include */,
+				BE4D07C4232CB78400D19557 /* plugins */,
+				BE4D07D6232CB78400D19557 /* src */,
+				9740EEB11CF90186004384FC /* Flutter */,
+				97C146F01CF9000F007C117D /* Runner */,
+				97C146EF1CF9000F007C117D /* Products */,
+				CF3B75C9A7D2FA2A4C99F110 /* Frameworks */,
+				65A9F38B97F90C6F12E49EF3 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		97C146EF1CF9000F007C117D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97C146EE1CF9000F007C117D /* Runner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97C146F01CF9000F007C117D /* Runner */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D0B0F232DF99400D19557 /* CppPlugin.h */,
+				BE4D0B0E232DF99400D19557 /* CppPlugin.mm */,
+				74970F661EDC0F26000507F3 /* GeneratedPluginRegistrant.h */,
+				74970F671EDC0F26000507F3 /* GeneratedPluginRegistrant.m */,
+				7AFFD8ED1D35381100E5BB4D /* AppDelegate.h */,
+				7AFFD8EE1D35381100E5BB4D /* AppDelegate.m */,
+				97C146FA1CF9000F007C117D /* Main.storyboard */,
+				97C146FD1CF9000F007C117D /* Assets.xcassets */,
+				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
+				97C147021CF9000F007C117D /* Info.plist */,
+				97C146F11CF9000F007C117D /* Supporting Files */,
+				BE4D07C0232CB26900D19557 /* swift.swift */,
+				BE4D07BF232CB26800D19557 /* Runner-Bridging-Header.h */,
+			);
+			path = Runner;
+			sourceTree = "<group>";
+		};
+		97C146F11CF9000F007C117D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97C146F21CF9000F007C117D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE4D07C4232CB78400D19557 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D0900232D4F0700D19557 /* flutterplug.cpp */,
+				BE4D07C5232CB78400D19557 /* wsfunction */,
+				BE4D07D5232CB78400D19557 /* flutterplug.h */,
+			);
+			name = plugins;
+			path = ../plugins;
+			sourceTree = "<group>";
+		};
+		BE4D07C5232CB78400D19557 /* wsfunction */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D07C6232CB78400D19557 /* OpertionFunction_xstruct.h */,
+				BE4D07C7232CB78400D19557 /* def_base.h */,
+				BE4D07C8232CB78400D19557 /* def_base_xstruct.h */,
+				BE4D07C9232CB78400D19557 /* LogicModule_Interface.h */,
+				BE4D07CA232CB78400D19557 /* userbase_xstruct.h */,
+				BE4D07CB232CB78400D19557 /* OpertionHandle.h */,
+				BE4D07CC232CB78400D19557 /* UpdateUIHandle.h */,
+				BE4D07CD232CB78400D19557 /* UpdateUIFunction_xstruct.h */,
+				BE4D07CE232CB78400D19557 /* OpertionFunction.h */,
+				BE4D07CF232CB78400D19557 /* roombase_xstruct.h */,
+				BE4D07D0232CB78400D19557 /* LogicModule.h */,
+				BE4D07D1232CB78400D19557 /* UpdateUIFunction.h */,
+				BE4D07D2232CB78400D19557 /* roombase.h */,
+				BE4D07D3232CB78400D19557 /* userbase.h */,
+			);
+			path = wsfunction;
+			sourceTree = "<group>";
+		};
+		BE4D07D6232CB78400D19557 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D07D7232CB78400D19557 /* json_plugin.cc */,
+				BE4D07D8232CB78400D19557 /* method_codec.cc */,
+				BE4D07D9232CB78400D19557 /* plugin_manager.cc */,
+				BE4D07DA232CB78400D19557 /* method_call.cc */,
+				BE4D07DB232CB78400D19557 /* standard_plugin.cc */,
+				BE4D07DC232CB78400D19557 /* json_method_codec.cc */,
+				BE4D07DD232CB78400D19557 /* standard_method_call.cc */,
+				BE4D07DE232CB78400D19557 /* plugin.cc */,
+				BE4D07E5232CB78400D19557 /* json_method_call.cc */,
+				BE4D07E6232CB78400D19557 /* standard_value.cc */,
+				BE4D07E7232CB78400D19557 /* method_result.cc */,
+				BE4D07E8232CB78400D19557 /* standard_method_codec.cc */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+		};
+		BE4D07E9232CB78400D19557 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D07EA232CB78400D19557 /* standard_method_call.h */,
+				BE4D07EB232CB78400D19557 /* plugin.h */,
+				BE4D07EC232CB78400D19557 /* method_result.h */,
+				BE4D07ED232CB78400D19557 /* standard_plugin.h */,
+				BE4D07EE232CB78400D19557 /* json_plugin.h */,
+				BE4D07FB232CB78400D19557 /* method_call.h */,
+				BE4D07FC232CB78400D19557 /* method_codec.h */,
+				BE4D07FD232CB78400D19557 /* standard_value.h */,
+				BE4D07FE232CB78400D19557 /* standard_method_codec.h */,
+				BE4D07FF232CB78400D19557 /* json_method_call.h */,
+				BE4D0800232CB78400D19557 /* json_method_codec.h */,
+				BE4D0801232CB78400D19557 /* plugin_manager.h */,
+			);
+			name = include;
+			path = ../include;
+			sourceTree = "<group>";
+		};
+		CF3B75C9A7D2FA2A4C99F110 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE0D9D0C232F7A3700945AFB /* liblibsqlite_code.a */,
+				BE0D9D0A232F756700945AFB /* liblibnetcore.a */,
+				BE0D9D08232F750600945AFB /* liblibvideochat.a */,
+				BE4D0902232D4FF300D19557 /* dalipush.framework */,
+				BE4D0904232D4FF300D19557 /* file_picker.framework */,
+				BE4D0906232D4FF300D19557 /* flutter_bugly.framework */,
+				BE4D0908232D4FF300D19557 /* flutter_local_notifications.framework */,
+				BE4D090A232D4FF300D19557 /* image_picker_saver.framework */,
+				BE4D090C232D4FF300D19557 /* image_picker.framework */,
+				BE4D090E232D4FF300D19557 /* keyboard_visibility.framework */,
+				BE4D0910232D4FF300D19557 /* MJExtension.framework */,
+				BE4D0912232D4FF300D19557 /* open_file.framework */,
+				BE4D0914232D4FF300D19557 /* path_provider.framework */,
+				BE4D0916232D4FF300D19557 /* Reachability.framework */,
+				BE4D0918232D4FF300D19557 /* screen.framework */,
+				BE4D091A232D4FF300D19557 /* shared_preferences.framework */,
+				BE4D091C232D4FF300D19557 /* soundpool.framework */,
+				BE4D091E232D4FF300D19557 /* video_render_plugin.framework */,
+				BE4D08FB232D340700D19557 /* libc++.tbd */,
+				BE4D08F6232CD35900D19557 /* liblibjson.a */,
+				BE4D08F4232CD33A00D19557 /* VideoToolbox.framework */,
+				BE4D08F0232CD2A000D19557 /* libiconv.tbd */,
+				BE4D08EB232CD05400D19557 /* libcrypto.a */,
+				BE4D08EA232CD05400D19557 /* libssl.a */,
+				BE4D08E8232CD02C00D19557 /* libevent.a */,
+				BE4D08E6232CD01000D19557 /* libcurl.a */,
+				BE4D08D5232CCFE000D19557 /* libavcodec.a */,
+				BE4D08D0232CCFE000D19557 /* libavformat.a */,
+				BE4D08D3232CCFE000D19557 /* libavresample.a */,
+				BE4D08CA232CCFDF00D19557 /* libavutil.a */,
+				BE4D08D4232CCFE000D19557 /* libfdk-aac.a */,
+				BE4D08D1232CCFE000D19557 /* liblibavmoudle.a */,
+				BE4D08CD232CCFE000D19557 /* liblibrtpsvr.a */,
+				BE4D08D6232CCFE000D19557 /* liblibyuv_wrapper.a */,
+				BE4D08CB232CCFDF00D19557 /* liblibyuv.a */,
+				BE4D08CC232CCFDF00D19557 /* libopenh264-1.6.0-ios.a */,
+				BE4D08CE232CCFE000D19557 /* libswresample.a */,
+				BE4D08D7232CCFE000D19557 /* libswscale.a */,
+				BE4D08CF232CCFE000D19557 /* libx264.a */,
+				BE4D08D2232CCFE000D19557 /* libyt_rtc_wrapper.a */,
+				BE4D08C4232CCF9400D19557 /* libcurl-networking.a */,
+				BE4D08C2232CCF7F00D19557 /* liblibpub.a */,
+				BE4D08C0232CCF6300D19557 /* liblibprotobuf.a */,
+				FB3D2095A29976D2D926E7DC /* Pods_Runner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97C146ED1CF9000F007C117D /* Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
+			buildPhases = (
+				2CA09EBC23C6B1CCFE6D3129 /* [CP] Check Pods Manifest.lock */,
+				9740EEB61CF901F6004384FC /* Run Script */,
+				97C146EA1CF9000F007C117D /* Sources */,
+				97C146EB1CF9000F007C117D /* Frameworks */,
+				97C146EC1CF9000F007C117D /* Resources */,
+				9705A1C41CF9048500538489 /* Embed Frameworks */,
+				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+				CB977F5AC278264E0772B004 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Runner;
+			productName = Runner;
+			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97C146E61CF9000F007C117D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "The Chromium Authors";
+				TargetAttributes = {
+					97C146ED1CF9000F007C117D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8BBC6P7P3V;
+						LastSwiftMigration = 1030;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97C146E51CF9000F007C117D;
+			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97C146ED1CF9000F007C117D /* Runner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97C146EC1CF9000F007C117D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
+				9740EEB51CF90195004384FC /* Generated.xcconfig in Resources */,
+				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				9740EEB41CF90195004384FC /* Debug.xcconfig in Resources */,
+				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
+				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CA09EBC23C6B1CCFE6D3129 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Thin Binary";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin";
+		};
+		9740EEB61CF901F6004384FC /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+		};
+		CB977F5AC278264E0772B004 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97C146EA1CF9000F007C117D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4D0901232D4F0700D19557 /* flutterplug.cpp in Sources */,
+				978B8F6F1D3862AE00F588F7 /* AppDelegate.m in Sources */,
+				BE4D080A232CB78400D19557 /* plugin.cc in Sources */,
+				BE4D0810232CB78400D19557 /* standard_value.cc in Sources */,
+				BE4D080F232CB78400D19557 /* json_method_call.cc in Sources */,
+				BE4D0804232CB78400D19557 /* method_codec.cc in Sources */,
+				BE4D0806232CB78400D19557 /* method_call.cc in Sources */,
+				BE4D0812232CB78400D19557 /* standard_method_codec.cc in Sources */,
+				97C146F31CF9000F007C117D /* main.m in Sources */,
+				BE4D0803232CB78400D19557 /* json_plugin.cc in Sources */,
+				BE4D0808232CB78400D19557 /* json_method_codec.cc in Sources */,
+				74970F681EDC0F26000507F3 /* GeneratedPluginRegistrant.m in Sources */,
+				BE4D0809232CB78400D19557 /* standard_method_call.cc in Sources */,
+				BE4D0811232CB78400D19557 /* method_result.cc in Sources */,
+				BE4D0B10232DF99400D19557 /* CppPlugin.mm in Sources */,
+				BE4D0807232CB78400D19557 /* standard_plugin.cc in Sources */,
+				BE4D0805232CB78400D19557 /* plugin_manager.cc in Sources */,
+				BE4D07C1232CB26900D19557 /* swift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C146FB1CF9000F007C117D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97C147001CF9000F007C117D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97C147031CF9000F007C117D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97C147041CF9000F007C117D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97C147061CF9000F007C117D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8BBC6P7P3V;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					X_STRUCT,
+					NO_LOCALE_SUPPORT,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJExtension/MJExtension.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Reachability/Reachability.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/dalipush/dalipush.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/file_picker/file_picker.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_bugly/flutter_bugly.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_local_notifications/flutter_local_notifications.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/image_picker/image_picker.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/image_picker_saver/image_picker_saver.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/keyboard_visibility/keyboard_visibility.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/open_file/open_file.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/path_provider/path_provider.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/screen/screen.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/shared_preferences/shared_preferences.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/soundpool/soundpool.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/video_render_plugin/video_render_plugin.framework/Headers\"",
+					"$(PROJECT_DIR)/../include",
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libpub/include,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/x2struct,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libjson/include,
+				);
+				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)/../plugins_libs/ios",
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libpub/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/lib_curl_networking/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libopenssl/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/lib_curl/prebuilt/ios,
+					"/Users/zhangxia/cppinclude/001_lib_prebuilt/libprotobuf-2.6.1/prebuilt/ios",
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/wsnetclient/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libsqlite_code/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libevent/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libjson/prebuilt/ios,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AlicloudUtils\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CloudPushSDK\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Flutter\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UTDID\"",
+					"-framework",
+					"\"UTMini\"",
+					"-framework",
+					"\"dalipush\"",
+					"-framework",
+					"\"file_picker\"",
+					"-framework",
+					"\"flutter_bugly\"",
+					"-framework",
+					"\"flutter_local_notifications\"",
+					"-framework",
+					"\"image_picker\"",
+					"-framework",
+					"\"image_picker_saver\"",
+					"-framework",
+					"\"keyboard_visibility\"",
+					"-framework",
+					"\"open_file\"",
+					"-framework",
+					"\"path_provider\"",
+					"-framework",
+					"\"screen\"",
+					"-framework",
+					"\"shared_preferences\"",
+					"-framework",
+					"\"soundpool\"",
+					"-framework",
+					"\"video_render_plugin\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yutaisoft.ytservice.ios1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		97C147071CF9000F007C117D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8BBC6P7P3V;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					X_STRUCT,
+					NO_LOCALE_SUPPORT,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJExtension/MJExtension.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Reachability/Reachability.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/dalipush/dalipush.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/file_picker/file_picker.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_bugly/flutter_bugly.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/flutter_local_notifications/flutter_local_notifications.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/image_picker/image_picker.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/image_picker_saver/image_picker_saver.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/keyboard_visibility/keyboard_visibility.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/open_file/open_file.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/path_provider/path_provider.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/screen/screen.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/shared_preferences/shared_preferences.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/soundpool/soundpool.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/video_render_plugin/video_render_plugin.framework/Headers\"",
+					"$(PROJECT_DIR)/../include",
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libpub/include,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/x2struct,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libjson/include,
+				);
+				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)/../plugins_libs/ios",
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libpub/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/lib_curl_networking/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libopenssl/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/lib_curl/prebuilt/ios,
+					"/Users/zhangxia/cppinclude/001_lib_prebuilt/libprotobuf-2.6.1/prebuilt/ios",
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/wsnetclient/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/wsavmoudle/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libsqlite_code/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libevent/prebuilt/ios,
+					/Users/zhangxia/cppinclude/001_lib_prebuilt/libjson/prebuilt/ios,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AlicloudUtils\"",
+					"-framework",
+					"\"Bugly\"",
+					"-framework",
+					"\"CloudPushSDK\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Flutter\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Reachability\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UTDID\"",
+					"-framework",
+					"\"UTMini\"",
+					"-framework",
+					"\"dalipush\"",
+					"-framework",
+					"\"file_picker\"",
+					"-framework",
+					"\"flutter_bugly\"",
+					"-framework",
+					"\"flutter_local_notifications\"",
+					"-framework",
+					"\"image_picker\"",
+					"-framework",
+					"\"image_picker_saver\"",
+					"-framework",
+					"\"keyboard_visibility\"",
+					"-framework",
+					"\"open_file\"",
+					"-framework",
+					"\"path_provider\"",
+					"-framework",
+					"\"screen\"",
+					"-framework",
+					"\"shared_preferences\"",
+					"-framework",
+					"\"soundpool\"",
+					"-framework",
+					"\"video_render_plugin\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yutaisoft.ytservice.ios1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C147031CF9000F007C117D /* Debug */,
+				97C147041CF9000F007C117D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97C147061CF9000F007C117D /* Debug */,
+				97C147071CF9000F007C117D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97C146E61CF9000F007C117D /* Project object */;
+}

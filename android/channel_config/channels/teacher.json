@@ -1,0 +1,17 @@
+{
+  "applicationId": "com.teacher.android",
+  "label": "校+(教师端)",
+  "channel_name": "teacher",
+  "app_icon": "@drawable/ic_launcher",
+  "BASE_URL": "http://www.teacher.com",
+  "INDEPENDENT_URL": "Y",
+  "ALIPUSH_APPKEY" : "0",
+  "ALIPUSH_APPSECRET" : "0",
+  "HUAWEI_APPID" : "appid=0",
+  "xiao_id" : "0",
+  "xiao_key" : "0",
+  "oppo_appkey" : "0",
+  "oppo_appSecret" : "0",
+  "meizu_appId" : "0",
+  "meizu_appkey" : "0",
+}

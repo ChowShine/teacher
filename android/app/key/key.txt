@@ -1,0 +1,4 @@
+
+Alias:teacher
+pass:Aa123123
+keytool -list -v -keystore key/teacher.jks

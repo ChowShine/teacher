@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">videochat</string>
+    <string name="title">Flutter Application</string>
+	<string name="soft_update_no">already last version</string>
+    <string name="soft_update_title">app update</string>
+    <string name="soft_update_info">find new version,update now?</string>
+    <string name="soft_update_updatebtn">update</string>
+    <string name="soft_update_later">update later</string>
+    <string name="soft_updating">updating...</string>
+    <string name="soft_update_cancel">cancel</string>
+</resources>

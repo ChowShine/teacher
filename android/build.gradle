@@ -1,0 +1,39 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        // 添加emas-services插件
+        //classpath 'com.aliyun.ams:emas-services:1.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
