@@ -11,8 +11,8 @@ class SelectStudentPage extends StatefulWidget {
   final Map<String, List<String>> mpGradeClassStu; //key：班级  value：学生列表
   final Map<String, List<String>> mpGradeClassHead; //key：班级  value：学生头像列表
   final List<String> lsGradeClass; //班级列表，可能1个元素
-  final List<String> lsIsHaveGrade;//已经选择的班级，这是页面此班级为选择状态
-  SelectStudentPage(this.mpGradeClassStu,this.mpGradeClassHead, this.lsGradeClass,this.lsIsHaveGrade);
+  final List<String> lsIsHaveGrade; //已经选择的班级，这是页面此班级为选择状态
+  SelectStudentPage(this.mpGradeClassStu, this.mpGradeClassHead, this.lsGradeClass, this.lsIsHaveGrade);
   @override
   _SelectStudentState createState() => _SelectStudentState();
 }
@@ -31,7 +31,7 @@ class _SelectStudentState extends State<SelectStudentPage> {
       widget.lsGradeClass.forEach((element) {
         if (widget.mpGradeClassStu.containsKey(element)) {
           mpGradeClassStudent[element] = widget.mpGradeClassStu[element];
-          mpGradeClassHead[element]=widget.mpGradeClassHead[element];
+          mpGradeClassHead[element] = widget.mpGradeClassHead[element];
         }
       });
     }
@@ -45,10 +45,10 @@ class _SelectStudentState extends State<SelectStudentPage> {
       });
     });
 
-    if(widget.lsIsHaveGrade.isNotEmpty){
+    if (widget.lsIsHaveGrade.isNotEmpty) {
       widget.lsIsHaveGrade.forEach((element) {
-        if(mp_isGradeChoose.containsKey(element)){
-          mp_isGradeChoose[element]=true;
+        if (mp_isGradeChoose.containsKey(element)) {
+          mp_isGradeChoose[element] = true;
         }
       });
     }
@@ -66,8 +66,8 @@ class _SelectStudentState extends State<SelectStudentPage> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: ()async{
-        Navigator.pop(context,<String>[]);
+      onWillPop: () async {
+        Navigator.pop(context, <String>[]);
         return Future.value(true);
       },
       child: Scaffold(
@@ -85,12 +85,11 @@ class _SelectStudentState extends State<SelectStudentPage> {
           actions: [
             ActionChip(
               onPressed: () {
-                List<String> lsSel=[];
+                List<String> lsSel = [];
                 mp_isGradeChoose.forEach((key, value) {
-                  if(value)
-                    lsSel.add(key);
+                  if (value) lsSel.add(key);
                 });
-                Navigator.pop(context,lsSel);
+                Navigator.pop(context, lsSel);
               },
               backgroundColor: Color.fromARGB(255, 58, 158, 255),
               label: Text(
@@ -130,31 +129,54 @@ class _SelectStudentState extends State<SelectStudentPage> {
                 padding: EdgeInsets.fromLTRB(ScreenMgr.setAdapterSize(60.0), 0.0, ScreenMgr.setAdapterSize(60.0), 0.0),
                 child: Row(
                   children: [
-                    InkWell(
-                      onTap: () {
-                        setState(() {
-                          mp_isGradeChoose[key] = !mp_isGradeChoose[key];
+                    Expanded(
+                      flex: 1,
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            mp_isGradeChoose[key] = !mp_isGradeChoose[key];
 
-                          if (mp_isGradeChoose[key]) {
-                            for (int i = 0; i < mp_isStuChoose[key].length; i++) {
-                              mp_isStuChoose[key][i] = true;
+                            if (mp_isGradeChoose[key]) {
+                              for (int i = 0; i < mp_isStuChoose[key].length; i++) {
+                                mp_isStuChoose[key][i] = true;
+                              }
+                            } else {
+                              for (int i = 0; i < mp_isStuChoose[key].length; i++) {
+                                mp_isStuChoose[key][i] = false;
+                              }
                             }
-                          } else {
-                            for (int i = 0; i < mp_isStuChoose[key].length; i++) {
-                              mp_isStuChoose[key][i] = false;
+                          });
+                        },
+                        child: func_buildImageAsset(mp_isGradeChoose[key] ? "fs_select.png" : "fs_un_select.png",
+                            dScale: 2.4),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            mp_isGradeChoose[key] = !mp_isGradeChoose[key];
+
+                            if (mp_isGradeChoose[key]) {
+                              for (int i = 0; i < mp_isStuChoose[key].length; i++) {
+                                mp_isStuChoose[key][i] = true;
+                              }
+                            } else {
+                              for (int i = 0; i < mp_isStuChoose[key].length; i++) {
+                                mp_isStuChoose[key][i] = false;
+                              }
                             }
-                          }
-                        });
-                      },
-                      child: func_buildImageAsset(mp_isGradeChoose[key] ? "fs_select.png" : "fs_un_select.png",
-                          dScale: 2.4),
-                    ),
-                    HSpacer(
-                      ScreenMgr.setAdapterSize(20.0),
-                    ),
-                    CusText(
-                      key,
-                      size: CusFontSize.size_18,
+                          });
+                        },
+                        child: Container(
+                          alignment: Alignment.centerLeft,
+                          child: CusText(
+                            key,
+                            size: CusFontSize.size_18,
+                          ),
+                        ),
+                      ),
                     ),
                     Spacer(),
                     CusText(
@@ -185,8 +207,9 @@ class _SelectStudentState extends State<SelectStudentPage> {
                     ScreenMgr.setAdapterSize(80.0), ScreenMgr.setAdapterSize(20.0)),
                 height: ScreenMgr.setAdapterSize(150.0),
                 child: InkWell(
-                  onTap: () {//暂时不选择学生
-                /*    if(mp_isGradeChoose[key])
+                  onTap: () {
+                    //暂时不选择学生
+                    /*    if(mp_isGradeChoose[key])
                     setState(() {
                       mp_isStuChoose[key][index] = !mp_isStuChoose[key][index];
                     });
@@ -197,7 +220,7 @@ class _SelectStudentState extends State<SelectStudentPage> {
                       HSpacer(
                         ScreenMgr.setAdapterSize(50.0),
                       ),
-                    /*  func_buildImageAsset(mp_isStuChoose[key][index] ? "fs_select.png" : "fs_un_select.png",
+                      /*  func_buildImageAsset(mp_isStuChoose[key][index] ? "fs_select.png" : "fs_un_select.png",
                           dScale: 2.4),*/
                       HSpacer(
                         ScreenMgr.setAdapterSize(20.0),

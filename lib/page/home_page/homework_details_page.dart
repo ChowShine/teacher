@@ -288,24 +288,32 @@ class _HomeworkDetailsPageState extends State<HomeworkDetailsPage> with SingleTi
         mainAxisSpacing: 0,
         childAspectRatio: 0.95,
       ),
-      delegate: SliverChildBuilderDelegate(
-        (BuildContext context, int index) {
-          return Container(
-            color: CusColorGrey.grey200,
-            padding: EdgeInsets.only(
-                left: index % 3 == 0 ? ScreenMgr.setAdapterSize(30.0) : 0,
-                right: index % 3 == 2 ? ScreenMgr.setAdapterSize(30.0) : 0),
-            child: InkWell(
-              onTap: () {
-                if (nTabIndex == 0) {
-                  RouteMgr().push(
-                      context,
-                      CommentHomeworkPage(this.provider.instance?.data?.already[index].homeWorkStudentId,
-                          this.provider.instance?.data?.already[index].username));
-                }
-              },
-              child: 
-                  Container(
+      delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
+        return index >= _getLen(nTabIndex)
+            ? Container(
+                color: CusColorGrey.grey200,
+                padding: EdgeInsets.only(
+                    left: index % 3 == 0 ? ScreenMgr.setAdapterSize(30.0) : 0,
+                    right: index % 3 == 2 ? ScreenMgr.setAdapterSize(30.0) : 0),
+                child: Container(
+                  color: Colors.white,
+                ),
+              )
+            : Container(
+                color: CusColorGrey.grey200,
+                padding: EdgeInsets.only(
+                    left: index % 3 == 0 ? ScreenMgr.setAdapterSize(30.0) : 0,
+                    right: index % 3 == 2 ? ScreenMgr.setAdapterSize(30.0) : 0),
+                child: InkWell(
+                  onTap: () {
+                    if (nTabIndex == 0) {
+                      RouteMgr().push(
+                          context,
+                          CommentHomeworkPage(this.provider.instance?.data?.already[index].homeWorkStudentId,
+                              this.provider.instance?.data?.already[index].username));
+                    }
+                  },
+                  child: Container(
                       color: Colors.white,
                       child: Column(
                         children: [
@@ -331,15 +339,49 @@ class _HomeworkDetailsPageState extends State<HomeworkDetailsPage> with SingleTi
                               : Container()
                         ],
                       )),
-
-            ),
-          );
-        },
-        childCount: nTabIndex == 0
+                ),
+              );
+      },
+          childCount: _getLenAdd(
+              nTabIndex) /*nTabIndex == 0
             ? this.provider.instance?.data?.already?.length ?? 0
-            : this.provider.instance?.data?.none?.length ?? 0,
-      ),
+            : this.provider.instance?.data?.none?.length ?? 0,*/
+          ),
     );
+  }
+
+  //判断学生人数 是否为3的倍数，不是则补全3的倍数
+  _getLenAdd(int tabIndex) {
+    if (tabIndex == 0) {
+      if ((this.provider.instance?.data?.already?.length ?? 0) % 3 == 1)
+        return (this.provider.instance?.data?.already?.length ?? 0) + 8;
+      else if ((this.provider.instance?.data?.already?.length ?? 0) % 3 == 2)
+        return (this.provider.instance?.data?.already?.length ?? 0) + 7;
+      else{
+        if((this.provider.instance?.data?.already?.length ?? 0)==0)
+          return (this.provider.instance?.data?.already?.length ?? 0)+9;
+        else return this.provider.instance.data.already.length;
+      }
+
+    } else if (tabIndex == 1) {
+      if ((this.provider.instance?.data?.none?.length ?? 0) % 3 == 1)
+        return (this.provider.instance?.data?.none?.length ?? 0) + 8;
+      else if ((this.provider.instance?.data?.none?.length ?? 0) % 3 == 2)
+        return (this.provider.instance?.data?.none?.length ?? 0) + 7;
+      else
+        if((this.provider.instance?.data?.none?.length ?? 0)==0)
+        return (this.provider.instance?.data?.none?.length ?? 0)+9;
+        else this.provider.instance.data.none.length;
+    }
+  }
+
+  //学生实际人数
+  _getLen(int tabIndex) {
+    if (tabIndex == 0) {
+      return (this.provider.instance?.data?.already?.length ?? 0);
+    } else if (tabIndex == 1) {
+      return (this.provider.instance?.data?.none?.length ?? 0);
+    }
   }
 
   _buildHomeworkImgVideo() {
@@ -370,7 +412,7 @@ class _HomeworkDetailsPageState extends State<HomeworkDetailsPage> with SingleTi
           )
         : Container(
             margin: EdgeInsets.fromLTRB(ScreenMgr.setAdapterSize(60.0), 0.0, ScreenMgr.setAdapterSize(60.0), 0.0),
-            height: func_ShowPicHeight(nImgVideoCnt)*1.1,
+            height: func_ShowPicHeight(nImgVideoCnt) * 1.1,
             child: GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

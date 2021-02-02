@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                                     Expanded(
                                       flex: 2,
                                       child: Container(
-                                        child: func_buildImageAsset("fs_homework_mgr.png"),
+                                        child: func_buildImageAsset("fs_homework_mgr.png",dScale: 3.0),
                                       ),
                                     ),
                                     Expanded(
@@ -123,7 +123,8 @@ class _HomePageState extends State<HomePage> {
                                       child: Container(
                                         child: CusText(
                                           "作业管理",
-                                          fontWeight: FontWeight.bold,
+                                          //fontWeight: FontWeight.bold,
+                                          size: CusFontSize.size_14,
                                         ),
                                       ),
                                     ),
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                                     Expanded(
                                       flex: 2,
                                       child: Container(
-                                        child: func_buildImageAsset("fs_notify_mgr.png"),
+                                        child: func_buildImageAsset("fs_notify_mgr.png",dScale: 3.0),
                                       ),
                                     ),
                                     Expanded(
@@ -145,7 +146,8 @@ class _HomePageState extends State<HomePage> {
                                       child: Container(
                                         child: CusText(
                                           "通知管理",
-                                          fontWeight: FontWeight.bold,
+                                          //fontWeight: FontWeight.bold,
+                                          size: CusFontSize.size_14,
                                         ),
                                       ),
                                     ),
@@ -157,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                                   Expanded(
                                     flex: 2,
                                     child: Container(
-                                      child: func_buildImageAsset("fs_achievement_mgr.png"),
+                                      child: func_buildImageAsset("fs_achievement_mgr.png",dScale: 3.0),
                                     ),
                                   ),
                                   Expanded(
@@ -165,7 +167,8 @@ class _HomePageState extends State<HomePage> {
                                     child: Container(
                                       child: CusText(
                                         "成绩管理",
-                                        fontWeight: FontWeight.bold,
+                                        //fontWeight: FontWeight.bold,
+                                        size: CusFontSize.size_14,
                                       ),
                                     ),
                                   ),
@@ -176,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                                   Expanded(
                                     flex: 2,
                                     child: Container(
-                                      child: func_buildImageAsset("fs_clock_mgr.png"),
+                                      child: func_buildImageAsset("fs_clock_mgr.png",dScale: 3.0),
                                     ),
                                   ),
                                   Expanded(
@@ -184,7 +187,8 @@ class _HomePageState extends State<HomePage> {
                                     child: Container(
                                       child: CusText(
                                         "打卡",
-                                        fontWeight: FontWeight.bold,
+                                        //fontWeight: FontWeight.bold,
+                                        size: CusFontSize.size_14,
                                       ),
                                     ),
                                   ),
@@ -238,7 +242,7 @@ class _HomePageState extends State<HomePage> {
                                           children: [
                                             CusText(
                                               "今日有2条请假申请",
-                                              size: CusFontSize.size_19,
+                                              size: CusFontSize.size_18,
                                               color: Colors.white,
                                             ),
                                             Spacer(),
@@ -285,11 +289,11 @@ class _HomePageState extends State<HomePage> {
                                         "布置作业",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: CusFontSize.size_19,
+                                            fontSize: CusFontSize.size_17,
                                             fontStyle: FontStyle.italic),
                                       ),
                                       Spacer(),
-                                      func_buildImageAsset("fs_assignment.png", dScale: 3.0),
+                                      func_buildImageAsset("fs_assignment.png", dScale: 3.5),
                                       HSpacer(
                                         ScreenMgr.setAdapterSize(30.0),
                                       ),
@@ -317,11 +321,11 @@ class _HomePageState extends State<HomePage> {
                                       "课程表",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: CusFontSize.size_19,
+                                          fontSize: CusFontSize.size_17,
                                           fontStyle: FontStyle.italic),
                                     ),
                                     Spacer(),
-                                    func_buildImageAsset("fs_timetable.png", dScale: 3.0),
+                                    func_buildImageAsset("fs_timetable.png", dScale: 3.5),
                                     HSpacer(
                                       ScreenMgr.setAdapterSize(30.0),
                                     ),

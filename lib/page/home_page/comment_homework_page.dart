@@ -128,6 +128,7 @@ class _CommentHomeworkPageState extends State<CommentHomeworkPage> {
             });
           } else {
             Constants.log.v("不可以发送");
+            showToast("语音点评失败");
           }
         } else if (data.msg == "onStart") {
           timeStart();
@@ -285,26 +286,35 @@ class _CommentHomeworkPageState extends State<CommentHomeworkPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: List.generate(
                     ls_strScore.length,
-                    (index) => InkWell(
-                          onTap: () {
-                            my_setState(() {
-                              nScoreId = index + 1;
-                            });
-                          },
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              func_buildImageAsset(
-                                  nScoreId == index + 1
-                                      ? "fs_score${index + 1}_select.png"
-                                      : "fs_score${index + 1}_unselect.png",
-                                  dScale: 3.0),
-                              CusText("${ls_strScore[index]}",
-                                  color: nScoreId == index + 1 ? Colors.black : CusColorGrey.grey400)
-                            ],
+                    (index) => Expanded(
+                      flex: 1,
+                      child: InkWell(
+                            onTap: () {
+                              my_setState(() {
+                                nScoreId = index + 1;
+                              });
+                            },
+                            child: Column(
+                              //crossAxisAlignment: CrossAxisAlignment.center,
+                              //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                               Expanded(
+                                 flex: 2,
+                                child: func_buildImageAsset(
+                                     nScoreId == index + 1
+                                         ? "fs_score${index + 1}_select.png"
+                                         : "fs_score${index + 1}_unselect.png",
+                                     dScale: 3.0),
+                               ),
+                                Expanded(
+                                  flex: 1,
+                                  child: CusText("${ls_strScore[index]}",
+                                      color: nScoreId == index + 1 ? Colors.black : CusColorGrey.grey400),
+                                )
+                              ],
+                            ),
                           ),
-                        ))),
+                    ))),
           );
         }),
         VSpacer(
@@ -549,6 +559,9 @@ class _CommentHomeworkPageState extends State<CommentHomeworkPage> {
                     }
                     await this.provider.getCommentReq(widget.student_homework_id, nScoreId,
                         strContent: _textEditingController.text, nTime: nPlayTime, lsfile: lsFile).then((value) {
+                          if(value=="ok")
+                            showToast("点评成功");
+                            else
                           showToast("$value");
                     });
                   },

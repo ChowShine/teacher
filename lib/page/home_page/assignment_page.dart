@@ -6,7 +6,7 @@ import 'package:teacher/page/common/common_param.dart';
 import 'package:videochat_package/constants/constants.dart';
 import 'package:videochat_package/constants/customMgr/screenMgr.dart';
 import 'package:videochat_package/constants/customMgr/widgetMgr.dart';
-
+import 'package:oktoast/oktoast.dart';
 import 'homework_content_page.dart';
 
 class AssignmentPage extends StatefulWidget {
@@ -47,30 +47,29 @@ class _AssignmentPageState extends State<AssignmentPage> {
             ),
           ),
           Container(
-            padding: EdgeInsets.fromLTRB(ScreenMgr.setAdapterSize(50.0), 0.0, ScreenMgr.setAdapterSize(30.0), 0.0),
+            padding: EdgeInsets.fromLTRB(ScreenMgr.setAdapterSize(50.0), 0.0, ScreenMgr.setAdapterSize(50.0), 0.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   height: ScreenMgr.setAdapterSize(300.0),
-                  padding:
-                      EdgeInsets.fromLTRB(ScreenMgr.setAdapterSize(50.0), 0.0, ScreenMgr.setAdapterSize(30.0), 0.0),
                   child: Row(
                     children: [
                       Expanded(
                           flex: 1,
                           child: Container(
                             alignment: Alignment.centerLeft,
-                            child: IconButton(
-                              padding: EdgeInsets.zero,
-                                icon: Icon(
-                                  Icons.chevron_left,
-                                  color: Colors.white,
-                                  size: 40.0,
-                                ),
-                                onPressed: () {
-                                RouteMgr().pop(context);
-                                }),
+                            child: InkWell(
+                                onTap: () {
+                                  RouteMgr().pop(context);
+                                },
+                              child: Icon(
+                                Icons.chevron_left,
+                                color: Colors.white,
+                                size: 40.0,
+                              ),
+                            ),
+
                           )),
                       Center(
                         child: CusText(
@@ -95,6 +94,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
                   },
                   child: Container(
                     padding: EdgeInsets.all(ScreenMgr.setAdapterSize(50.0)),
+                    margin: EdgeInsets.only(top: ScreenMgr.setAdapterSize(50.0)),
                     height: ScreenMgr.setAdapterSize(400.0),
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.white),
                     child: Row(
@@ -133,7 +133,9 @@ class _AssignmentPageState extends State<AssignmentPage> {
                   ScreenMgr.setAdapterSize(100.0),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    showToast("开发中......");
+                  },
                   child: Container(
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.all(ScreenMgr.setAdapterSize(50.0)),

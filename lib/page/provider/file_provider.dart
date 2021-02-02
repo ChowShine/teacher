@@ -1,5 +1,4 @@
-import 'package:teacher/page/common/common_func.dart';
-import '../model/file_model.dart';
+
 import 'package:videochat_package/constants/base/base_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:videochat_package/constants/token/teacher_token.dart';

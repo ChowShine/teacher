@@ -323,7 +323,7 @@ class _HomeWorkContentPageState extends State<HomeWorkContentPage> {
                                 lsHaveSelGrade.isEmpty
                                     ? CusText("")
                                     : CusText(
-                                  lsHaveSelGrade.length > 1 ? "${lsHaveSelGrade[0]} 等" : "${lsHaveSelGrade[0]}",
+                                        lsHaveSelGrade.length > 1 ? "${lsHaveSelGrade[0]} 等" : "${lsHaveSelGrade[0]}",
                                         size: CusFontSize.size_16,
                                         color: CusColorGrey.grey500,
                                       )
@@ -378,7 +378,7 @@ class _HomeWorkContentPageState extends State<HomeWorkContentPage> {
                             child: Row(
                               children: [
                                 CusText(
-                                  "截至提交时间",
+                                  "截止提交时间",
                                   size: CusFontSize.size_16,
                                 ),
                                 Spacer(),
@@ -430,8 +430,11 @@ class _HomeWorkContentPageState extends State<HomeWorkContentPage> {
                       lsFile: lsFile)
                   .then((value) {
                 if (value != null) {
-                  showToast("$value");
-                  if (value == "ok") Navigator.pop(context, "back_to_first");
+
+                  if (value == "ok") {
+                    showToast("发布成功");
+                    Navigator.pop(context, "back_to_first");
+                  }else showToast("$value");
                 }
               });
             },
